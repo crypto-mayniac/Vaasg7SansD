@@ -4,7 +4,7 @@ import "animate.css/animate.compat.css"
 import "./globals.css";
 
 const christmasFont = localFont({
-  src: "./fonts/christmas.woff",
+  src: "./fonts/christmas2.woff",
   variable: "--christmas",
   weight: "normal",
 });
