@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig = {
+  webpack(config: any) {
+    config.module.rules.push({
+      test: /\.(mp4|webm|ogg|swf)$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[name].[hash][ext]',
+      },
+    });
+    return config;
+  },
 };
-
-export default nextConfig;
+module.exports = nextConfig;
