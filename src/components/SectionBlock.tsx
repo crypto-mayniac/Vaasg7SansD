@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from "next/image";
 
 interface SectionBlockProps {
-    imageSrc: any;
+    imageSrc: StaticImageData;
     imageAlt: string;
     text: string;
     flipped?: boolean;

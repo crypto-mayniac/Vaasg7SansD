@@ -16,7 +16,7 @@ import Daughter from "@/images/daughter_idea.png";
 import SantaFloating from "@/images/sleigh.svg";
 import Image from "next/image";
 import Nav from "@/components/Nav";
-import NotificationListener from '../components/NotificationListener';
+// import NotificationListener from '../components/NotificationListener';
 import ScrollAnimation from "react-animate-on-scroll";
 import CountUp from "react-countup";
 import TelergamButton from "@/images/Telegram_btn.svg";
@@ -121,7 +121,7 @@ export default function Home() {
                   imageSrc={DrunkSanta}
                   imageWidth="928"
                   imageHeight="928"
-                  text={`Ol’ <strong>Saint Nick</strong> has developed a pretty serious drinking addiction this year, so we need to pump this token so Santa’s Daughter can afford to get him to rehab before Dec 25, 2024.`}
+                  text={`Ol’ <strong>Saint Nick</strong> has developed a pretty serious drinking addiction this year, so we need to pump this token so Santa&apos;s Daughter can afford to get him to rehab before Dec 25, 2024.`}
                   imageAlt="Drunk Santa"
                 />
               </ScrollAnimation>
@@ -131,7 +131,7 @@ export default function Home() {
                   imageWidth="1228"
                   imageHeight="1068"
                   flipped
-                  text={`Rudolph and all the other reindeers are not happy because of Santa's behavior, and have asked Santa’s Daughter for help.`}
+                  text={`Rudolph and all the other reindeers are not happy because of Santa's behavior, and have asked Santa&apos;s Daughter for help.`}
                   imageAlt="Sad Reindeer"
                 />
               </ScrollAnimation>
@@ -140,8 +140,8 @@ export default function Home() {
                   imageSrc={Daughter}
                   imageWidth="918"
                   imageHeight="1003"
-                  text={`Santa’s Daughter came in clutch, and thought of a brilliant idea, why don’t we make a token on <span style="color: #52D593;">Pump</span><span style="color: white;">.fun?</span> <span style="color: #2FBDB1;">I mean isn’t that what all the kids are doing these days?</span>`}
-                  imageAlt="Santa's Daughter idea"
+                  text={`Santa&apos;s Daughter came in clutch, and thought of a brilliant idea, why don&apos;t we make a token on <span style="color: #52D593;">Pump</span><span style="color: white;">.fun?</span> <span style="color: #2FBDB1;">I mean isn&apos;t that what all the kids are doing these days?</span>`}
+                  imageAlt="Santa&apos;s Daughter idea"
                 />
               </ScrollAnimation>
             </div>
@@ -163,7 +163,6 @@ export default function Home() {
                   <div
                     className={`absolute top-0 left-0 h-full border rounded-2xl progress-bar blue-gradient ${progressVisible ? "visible" : ""}`}
                     style={{
-                      "--progress-percentage": `${progressPercentage}%`,
                       width: `${progressPercentage}%`,
                     }}
                   >
@@ -228,8 +227,8 @@ export default function Home() {
                     </div>
 
                     <div className="rounded-2xl border bg-neutral-50 bg-opacity-10 border-neutral-50 border-opacity-20 backdrop-blur-xl p-5">
-                      <div className="text-[#9cf8ff] text-2xl font-bold mb-3">4. Buy Santa's Daughter</div>
-                      <p className="text-neutral-300 text-xl">Buy some Santa's Daughter!</p>
+                      <div className="text-[#9cf8ff] text-2xl font-bold mb-3">4. Buy Santa&apos;s Daughter</div>
+                      <p className="text-neutral-300 text-xl">Buy some Santa&apos;s Daughter!</p>
                     </div>
                   </div>
                 </div>
@@ -253,7 +252,7 @@ export default function Home() {
 
           </div>
           <footer>
-            <p className="text-center py-4 text-xl md:text-2xl">Copyright © 2024 Santa's Daughter SOL</p>
+            <p className="text-center py-4 text-xl md:text-2xl">Copyright © 2024 Santa&apos;s Daughter SOL</p>
           </footer>
         </div>
       </div>

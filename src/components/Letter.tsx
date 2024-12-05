@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import Sheet from "@/images/sheet.png";
 import TopDeco from "@/images/top_letter.svg";
 import TopDeco2 from "@/images/top_letter.svg";
 import BigLogo from "@/images/coin_big.png";
@@ -14,7 +13,7 @@ const Letter = () => {
                 <Image src={BigLogo} width="538" height="570" alt="big logo" unoptimized className="w-[269px] h-[285px] absolute left-1/2 -translate-x-1/2 -top-44 md:rotate-3" />
                 <Image className="absolute w-12 md:w-24 -top-4 -left-2 md:-top-8 md:-left-8" src={TopDeco} alt="decoration" />
                 <Image className="absolute w-12 md:w-24 -top-4 -right-2 md:-top-8 md:-right-8 scale-x-[-1]" src={TopDeco2} alt="decoration 2" />
-                <p className=" max-w-full w-full text-center text-amber-950 text-2xl lg:text-5xl md:text-3xl">Dear Believers,<br></br>It's me, Santa’s Daughter! While Santa's busy with his alcoholism recovery, I've got something special up my sleeve—introducing Santa’s Daughter Coin! A little holiday cheer with a whole lot of pump and fun. Join me on this jolly ride to fill stockings and wallets alike! 🎄✨<br></br>Warm wishes,<br></br>- Santa’s Daughter</p>
+                <p className=" max-w-full w-full text-center text-amber-950 text-2xl lg:text-5xl md:text-3xl">Dear Believers,<br></br>It&apos;s me, Santa&apos;s Daughter! While Santa&apos;s busy with his alcoholism recovery, I&apos;ve got something special up my sleeve—introducing Santa&apos;s Daughter Coin! A little holiday cheer with a whole lot of pump and fun. Join me on this jolly ride to fill stockings and wallets alike! 🎄✨<br></br>Warm wishes,<br></br>- Santa&apos;s Daughter</p>
                 <Image className="w-72 mt-5" alt="stamp" src={BottomText} />
                 <Image className="w-28 md:w-36 absolute bottom-8 md:bottom-12 right-5" alt="stamp" src={Stamp} />
                 {/* <div style={{ background: "#efd5b2" }}></div> */}
