@@ -6,13 +6,22 @@ const nextConfig: NextConfig = {
 
   // Custom webpack configuration
   webpack(config: any) {
-    config.module.rules.push({
-      test: /\.(mp4|webm|ogg|swf)$/,
-      type: 'asset/resource',
-      generator: {
-        filename: 'static/media/[name].[hash][ext]',
+    config.module.rules.push(
+      {
+        test: /\.(mp4|webm|ogg|swf)$/, // Match media files
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash][ext]',
+        },
       },
-    });
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/, // Match font files
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/fonts/[name].[hash][ext]',
+        },
+      }
+    );
     return config;
   },
 
@@ -22,4 +31,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
