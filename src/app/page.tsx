@@ -15,6 +15,7 @@ import Sled from "@/images/sled.png"
 import Daughter from "@/images/daughter_idea.png";
 import SantaFloating from "@/images/sleigh.svg";
 import Image from "next/image";
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Nav from "@/components/Nav";
 // import NotificationListener from '../components/NotificationListener';
 import ScrollAnimation from "react-animate-on-scroll";
@@ -22,6 +23,7 @@ import CountUp from "react-countup";
 import TelergamButton from "@/images/Telegram_btn.svg";
 import XButton from "@/images/X_btn.svg";
 import { useEffect, useState } from "react";
+import getBaseWebpackConfig from "next/dist/build/webpack-config";
 
 const ScrollTrigger = ({
   children,
@@ -53,9 +55,12 @@ const ScrollTrigger = ({
   );
 };
 
+const contractAddress = "SCACASCASCASCASCSACACpump";
+
 export default function Home() {
   const [count, setCount] = useState<number | null>(null);
   const [progressVisible, setProgressVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
   const maxCount = 500;
   const progressPercentage = count
     ? Math.min((count / maxCount) * 100, 100)
@@ -105,6 +110,35 @@ export default function Home() {
           </div>
         </ScrollAnimation>
       </div>
+
+      <div className="fixed right-5 bottom-5 z-40 backdrop-blur rounded-3xl overflow-hidden" style={{ background: "hsl(0deg 0% 0.94% / 23%)" }}>
+        <div className="inline-flex border-2 rounded-3xl p-3 border-opacity-15 border-neutral-50 items-center gap-2 overflow-hidden">
+          <p className="text-[#9cf8ff] font-bold">CA:</p>
+          <span
+            className="text-neutral-50 opacity-80 font-bold truncate"
+            style={{
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {contractAddress
+              ? `${contractAddress.slice(0, 4)}...${contractAddress.slice(-4)}`
+              : 'N/A'}
+          </span>
+
+          <CopyToClipboard text={contractAddress} onCopy={() => setCopied(true)}>
+            <button
+              className="bg-white bg-opacity-10 p-2 px-4 rounded-2xl text-sm md:text-base font-bold text-neutral-50 hover:bg-opacity-100 transition-colors group hover:text-neutral-800"
+            >
+              {copied ? 'Copied!' : 'Copy'}
+            </button>
+          </CopyToClipboard>
+        </div>
+      </div>
+
+
+
 
       <div className="relative">
         {/* <ColoredBg color="#229fcd" height="400px" width="80%" /> */}
