@@ -101,7 +101,7 @@ export default function Home() {
       <RepeatingSnow />
       <Nav />
 
-      <Image src={SantaFloating} className="absolute floating top-32 right-14 opacity-60" alt="floating santa" />
+      <Image src={SantaFloating} className="absolute floating right-2 top-12 md:top-32 md:right-14 w-2/3 md:w-auto opacity-60" alt="floating santa" />
       <div className="relative">
         <ScrollAnimation animateOnce animateIn="fadeIn">
           <Letter />
@@ -110,6 +110,8 @@ export default function Home() {
           </div>
         </ScrollAnimation>
       </div>
+
+
 
       <div className="fixed right-5 bottom-5 z-40 backdrop-blur rounded-3xl overflow-hidden" style={{ background: "hsl(0deg 0% 0.94% / 23%)" }}>
         <div className="inline-flex border-2 rounded-3xl p-3 border-opacity-15 border-neutral-50 items-center gap-2 overflow-hidden">
@@ -143,11 +145,40 @@ export default function Home() {
       <div className="relative">
         {/* <ColoredBg color="#229fcd" height="400px" width="80%" /> */}
         <div className="relative overflow-hidden">
-          <div className="w-full -mt-20 pt-44">
+          <div className="w-full -mt-20 pt-32">
             <RepeatingBg />
-            <ScrollAnimation animateOnce animateIn="fadeIn" delay={500}>
-              <FancyText text="North Pole Shenanigans and Backstory" />
+
+
+            <ScrollAnimation animateOnce animateIn="fadeIn">
+              <div className="flex items-center justify-center px-4">
+                <div style={{ background: "hsl(0deg 0% 0.94% / 23%)" }} className="inline-flex mt-4 mb-4 border-2 w-full rounded-3xl justify-center p-3 max-w-screen-xl  border-opacity-15 border-neutral-50 items-center gap-2 overflow-hidden">
+                  <p className="text-[#9cf8ff] text-xl md:text-3xl font-bold">CONTRACT:</p>
+                  <span
+                    className="text-neutral-50 opacity-80 font-bold truncate text-xl md:text-3xl"
+                    style={{
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                    }}
+                  >
+                    {contractAddress
+                      ? `${contractAddress.slice(0, 4)}...${contractAddress.slice(-4)}`
+                      : 'N/A'}
+                  </span>
+
+                  <CopyToClipboard text={contractAddress} onCopy={() => setCopied(true)}>
+                    <button
+                      className="bg-white bg-opacity-10 p-2 px-4 rounded-2xl  md:text-base font-bold text-neutral-50 hover:bg-opacity-100 transition-colors group text-xl md:text-3xl hover:text-neutral-800"
+                    >
+                      {copied ? 'Copied!' : 'Copy'}
+                    </button>
+                  </CopyToClipboard>
+                </div>
+              </div>
             </ScrollAnimation>
+            {/* <ScrollAnimation animateOnce animateIn="fadeIn" delay={500}> */}
+            <FancyText text="North Pole Shenanigans and Backstory" />
+            {/* </ScrollAnimation> */}
 
             <div className="section-blocks">
               <ScrollAnimation animateOnce animateIn="fadeInUp">
