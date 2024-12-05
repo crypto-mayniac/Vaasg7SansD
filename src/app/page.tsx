@@ -23,7 +23,6 @@ import CountUp from "react-countup";
 import TelergamButton from "@/images/Telegram_btn.svg";
 import XButton from "@/images/X_btn.svg";
 import { useEffect, useState } from "react";
-import getBaseWebpackConfig from "next/dist/build/webpack-config";
 
 const ScrollTrigger = ({
   children,
