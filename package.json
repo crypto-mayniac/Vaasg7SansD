@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-animate-on-scroll": "^2.1.8",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "animate.css": "^4.1.1",
     "io": "^1.5.3",
     "next": "15.0.3",
