@@ -20,7 +20,7 @@ const typeFont = localFont({
 // });
 
 export const metadata: Metadata = {
-  title: "Santa's Daughter - SOL",
+  title: "Santa's Daughter - Solana",
 };
 
 export default function RootLayout({

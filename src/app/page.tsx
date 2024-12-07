@@ -54,16 +54,17 @@ const ScrollTrigger = ({
   );
 };
 
-const contractAddress = "SCACASCASCASCASCSACACpump";
+const contractAddress = "Soon...";
 
 export default function Home() {
   const [count, setCount] = useState<number | null>(null);
   const [progressVisible, setProgressVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const maxCount = 500;
-  const progressPercentage = count
-    ? Math.min((count / maxCount) * 100, 100)
-    : 0;
+  // const progressPercentage = count
+  //   ? Math.min((count / maxCount) * 100, 100)
+  //   : 0;
+  const progressPercentage = 0;
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
@@ -254,7 +255,9 @@ export default function Home() {
                     }}
                   >
                     {count !== null && progressVisible ? (
-                      <CountUp duration={2} end={count} />
+                      // <CountUp duration={2} end={count} />
+                      <CountUp duration={2} end={0} />
+
                     ) : (
                       `${count || 0}`
                     )}
@@ -305,7 +308,7 @@ export default function Home() {
 
                   <div className="flex gap-5 flex-wrap justify-center items-center pt-5">
                     <a target="_blank" className="hover:brightness-[1.1] transition-all w-96" href="#"><Image src={TelergamButton} alt="tg-link" /></a>
-                    <a target="_blank" className="hover:brightness-[1.1] transition-all w-96" href="#"><Image src={XButton} alt="tg-link" /></a>
+                    <a href="https://x.com/santas_dtr_sol" target="_blank" className="hover:brightness-[1.1] transition-all w-96" href="#"><Image src={XButton} alt="tg-link" /></a>
                   </div>
 
                 </div>
