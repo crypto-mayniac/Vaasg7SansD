@@ -61,10 +61,10 @@ export default function Home() {
   const [progressVisible, setProgressVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const maxCount = 500;
-  // const progressPercentage = count
-  //   ? Math.min((count / maxCount) * 100, 100)
-  //   : 0;
-  const progressPercentage = 0;
+  const progressPercentage = count
+    ? Math.min((count / maxCount) * 100, 100)
+    : 0;
+  // const progressPercentage = 0;
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
 
@@ -255,8 +255,8 @@ export default function Home() {
                     }}
                   >
                     {count !== null && progressVisible ? (
-                      // <CountUp duration={2} end={count} />
-                      <CountUp duration={2} end={0} />
+                      <CountUp duration={2} end={count} />
+                      // <CountUp duration={2} end={0} />
 
                     ) : (
                       `${count || 0}`
